@@ -1,0 +1,58 @@
+{
+  "showcase_image": [
+    {
+      "ment": "XR LIVE NCT 127 SPECIAL EVENT : THE CASTLE No. 127",
+      "imagePath": "/web/main/01_MAIN_BANNER/MD_b_pc.jpg",
+      "backgroung_color": "#d8e22d",
+      "artist": "nct"
+    },
+    {
+      "ment" : "NCT 127 The 3rd Album -'Sticker' MD Collection",
+      "imagePath": "/web/main/01_MAIN_BANNER/STICKER_bn_PC.jpg",
+      "backgroung_color": "#d8e22d",
+      "artist": "nct"
+    },
+    {
+      "ment" : "TAEMARI & GGUNG",
+      "imagePath": "/web/main/01_MAIN_BANNER/TMMD_bn_PC.jpg",
+      "backgroung_color": "#78dbd9",
+      "artist": "taemin"
+    },
+    {
+      "ment" : "NCT 127 NEO WORLD",
+      "imagePath": "/web/main/01_MAIN_BANNER/neoworld_b_pc_2.jpg",
+      "backgroung_color": "#d8e22d",
+      "artist": "nct"
+    },
+    {
+      "ment" : "SEASON'S GREETINGS 2022",
+      "imagePath": "/web/main/01_MAIN_BANNER/d_eremind_b_pc_kr.jpg",
+      "backgroung_color": "#006bd5",
+      "artist": "taemin"
+    },
+    {
+      "ment" : "aespa 'Savage' MD COLLECTION",
+      "imagePath": "/web/main/01_MAIN_BANNER/aespa_PC_BN.jpg",
+      "backgroung_color": "#3d435f",
+      "artist": "aespa"
+    },
+    {
+      "ment" : "aespa The 1st ANNIVERSARY",
+      "imagePath": "/web/main/01_MAIN_BANNER/BN_PC_gr_KR2.jpg",
+      "backgroung_color": "#3d435f",
+      "artist": "aespa"
+    },
+    {
+      "ment" : "SUPER JUNIOR-D&E The 1st Album 'COUNTDOWN'",
+      "imagePath": "/web/main/01_MAIN_BANNER/dne_bn_PC.jpg",
+      "backgroung_color": "#006bd5",
+      "artist": "sj"
+    },
+    {
+      "ment" : "NCT 127 The 3rd Album Repackage - Favorite",
+      "imagePath": "/web/main/01_MAIN_BANNER/Favorite_bn_PC.jpg",
+      "backgroung_color": "#d8e22d",
+      "artist": "nct"
+    }
+  ]
+}
