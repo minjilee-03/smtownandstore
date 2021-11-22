@@ -1,13 +1,12 @@
-import Header from './component/header.js';
-import Time from './component/main-contents';
-import "./css/main-banner.css";
+import React, {Component} from "react";
+import Main from "./component/main-page";
+import Header from "./component/header";
+
 function App() {
   return (
     <div className="App">
-        <div className="background-color-container">
-            <Header/>
-            <Time/>
-        </div>
+        <Header/>
+        <Main />
     </div>
   );
 }

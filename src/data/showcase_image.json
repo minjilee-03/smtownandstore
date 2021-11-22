@@ -1,58 +1,58 @@
 {
   "showcase_image": [
     {
+      "id": 0,
       "ment": "XR LIVE NCT 127 SPECIAL EVENT : THE CASTLE No. 127",
       "imagePath": "/web/main/01_MAIN_BANNER/MD_b_pc.jpg",
-      "backgroung_color": "#d8e22d",
-      "artist": "nct"
+      "BackgroundColor": "d8e22d"
     },
     {
+      "id": 1,
       "ment" : "NCT 127 The 3rd Album -'Sticker' MD Collection",
       "imagePath": "/web/main/01_MAIN_BANNER/STICKER_bn_PC.jpg",
-      "backgroung_color": "#d8e22d",
-      "artist": "nct"
+      "BackgroundColor": "d8e22d"
     },
     {
+      "id": 2,
       "ment" : "TAEMARI & GGUNG",
       "imagePath": "/web/main/01_MAIN_BANNER/TMMD_bn_PC.jpg",
-      "backgroung_color": "#78dbd9",
-      "artist": "taemin"
+      "BackgroundColor": "78dbd9"
     },
     {
+      "id": 3,
       "ment" : "NCT 127 NEO WORLD",
       "imagePath": "/web/main/01_MAIN_BANNER/neoworld_b_pc_2.jpg",
-      "backgroung_color": "#d8e22d",
-      "artist": "nct"
+      "BackgroundColor": "d8e22d"
     },
     {
+      "id": 4,
       "ment" : "SEASON'S GREETINGS 2022",
       "imagePath": "/web/main/01_MAIN_BANNER/d_eremind_b_pc_kr.jpg",
-      "backgroung_color": "#006bd5",
-      "artist": "taemin"
+      "BackgroundColor": "006bd5"
     },
     {
+      "id": 5,
       "ment" : "aespa 'Savage' MD COLLECTION",
       "imagePath": "/web/main/01_MAIN_BANNER/aespa_PC_BN.jpg",
-      "backgroung_color": "#3d435f",
-      "artist": "aespa"
+      "BackgroundColor": "3d435f"
     },
     {
+      "id": 6,
       "ment" : "aespa The 1st ANNIVERSARY",
       "imagePath": "/web/main/01_MAIN_BANNER/BN_PC_gr_KR2.jpg",
-      "backgroung_color": "#3d435f",
-      "artist": "aespa"
+      "BackgroundColor": "3d435f"
     },
     {
+      "id": 7,
       "ment" : "SUPER JUNIOR-D&E The 1st Album 'COUNTDOWN'",
       "imagePath": "/web/main/01_MAIN_BANNER/dne_bn_PC.jpg",
-      "backgroung_color": "#006bd5",
-      "artist": "sj"
+      "BackgroundColor": "006bd5"
     },
     {
+      "id": 8,
       "ment" : "NCT 127 The 3rd Album Repackage - Favorite",
       "imagePath": "/web/main/01_MAIN_BANNER/Favorite_bn_PC.jpg",
-      "backgroung_color": "#d8e22d",
-      "artist": "nct"
+      "BackgroundColor": "d8e22d"
     }
   ]
 }

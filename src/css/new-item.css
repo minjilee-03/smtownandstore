@@ -1,0 +1,24 @@
+.new-item-section{
+    width: 1220px;
+    margin: 50px auto 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.new-item-section .new-item-container{
+    font-size: 40px;
+    color: #2d2f43;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0 35px;
+}
+.new-item-section .new-item-container .title-point{
+    margin-left: 111px;
+    top: 66px;
+    background: #A4B5E3;
+    width: 6.5px;
+    height: 6.5px;
+    position: absolute;
+    border-radius: 50%;
+    display: inline-block;
+}
