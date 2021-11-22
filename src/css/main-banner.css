@@ -39,7 +39,7 @@
 }
 .main-banner-ment{
     position: absolute;
-    left: 796px;
+    left:1211px;
     color: #fff;
     font-weight: 500;
     /*transition: all 0.3s 0.5s;*/
@@ -82,7 +82,7 @@
     height: 100px;
     position: absolute;
     top: 712px;
-    right: 882px;
+    right: 888px;
     z-index: 3;
     font-size: 50px;
     cursor: pointer;
@@ -113,7 +113,7 @@
     position: absolute;
     bottom: 10px;
     width: 141px;
-    right: 836px;
+    right: 840px;
     background-image: url(https://smtownandstore.com/morenvyimg/main_img_arrow.gif);
     background-position: 92px 5px;
     background-repeat: no-repeat;

@@ -30,7 +30,7 @@ function MainSlideFun() {
             autoplay={{ delay: 4500 }}
             initialSlide={1}
             ref={swiperRef}
->
+        >
             {showcase_image.showcase_image.map(showcase =>{
                 return (
                     <SwiperSlide key={showcase.id}>
@@ -57,27 +57,3 @@ function MainSlideFun() {
 
 
 export default MainSlideFun;
-
-
-
-
-
-
-
-// import React, {Component} from "react";
-//
-// import '../css/main-banner.css';
-// import sticker from '../assets/sticker-main-banner.jpg'
-//
-// class MainSlide extends Component{
-//     render(){
-//         return (
-//             <div className="main-banner-slide">
-//                 <img src={sticker}/>
-//             </div>
-//         );
-//     }
-// }
-// export default MainSlide;
-
-

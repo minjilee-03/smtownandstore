@@ -4,8 +4,9 @@
     position: relative;
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
-.new-item-section .new-item-container{
+.new-item-section .new-item-container .new-item-title{
     font-size: 40px;
     color: #2d2f43;
     font-weight: 700;
@@ -21,4 +22,7 @@
     position: absolute;
     border-radius: 50%;
     display: inline-block;
+}
+.swiper-slide{
+    width: 232px;
 }

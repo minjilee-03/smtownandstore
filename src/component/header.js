@@ -1,4 +1,5 @@
-import React, {Component} from "react";
+import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 import HeaderLogo from "../assets/header-logo.svg";
 import mypage from "../assets/mypage.svg";
@@ -6,11 +7,12 @@ import search from "../assets/search.svg";
 import cart from "../assets/cart.svg";
 import collect from "../assets/collect.svg";
 
+
 import '../css/header.css';
 import '../css/index.css'
+import '../css/sub-menu.css'
 
-class header extends Component{
-    render(){
+function header (){
         return (
             <div className="header-section">
                 <div className="header-inner">
@@ -38,7 +40,28 @@ class header extends Component{
                             <div className="inner bottom-header-container">
                                 <div className="top-menu">
                                     <ul className="top-menu-list">
-                                        <li className="top-menu-item">CELEB</li>
+                                        <li className="top-menu-item">CELEB
+                                            <ul className="sub-menu-list">
+                                                <li className="sub-menu-item">
+                                                    <a className="sub-menu-link" href="#">
+                                                        BoA
+                                                        <span className="circle"></span>
+                                                    </a>
+                                                </li>
+                                                <li className="sub-menu-item">
+                                                    <a className="sub-menu-link" Link to="/celeb_nct.js">
+                                                        NCT
+                                                        <span className="circle"></span>
+                                                    </a>
+                                                </li>
+                                                <li className="sub-menu-item">
+                                                    <a className="sub-menu-link" href="#">
+                                                        EXO
+                                                        <span className="circle"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
                                         <li className="top-menu-item">PRODUCT</li>
                                         <li className="top-menu-item">&PICK</li>
                                         <li className="top-menu-item">EVENT</li>
@@ -71,5 +94,5 @@ class header extends Component{
             </div>
         );
     }
-}
 export default header;
+

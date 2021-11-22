@@ -1,0 +1,32 @@
+{
+  "new_items": [
+    {
+      "id": 0,
+      "imagePath": "web/product/medium/202111/71dde3f16ae9e0a0e3cede6cd3102d1e.jpg"
+    },
+    {
+      "id": 1,
+      "imagePath": "web/product/medium/202111/f1023212c06e6aba05b5b3364698e242.jpg"
+    },
+    {
+      "id": 2,
+      "imagePath": "web/product/medium/202111/bbeda7c6f6edf270922a8700eee5df0b.jpg"
+    },
+    {
+      "id": 3,
+      "imagePath": "web/product/medium/202111/f2f9aba0d58260fd8ed786172b40c95c.jpg"
+    },
+    {
+      "id": 4,
+      "imagePath": "web/product/medium/202111/667374f87348f2d2998d29aacfc47f7d.jpg"
+    },
+    {
+      "id": 5,
+      "imagePath": "web/product/medium/202111/c432e10fdb453b195f602e3c704497cd.jpg"
+    },
+    {
+      "id": 6,
+      "imagePath": "web/product/medium/202111/5a7679758cdd917aa7185daa7b4f9792.jpg"
+    }
+  ]
+}
