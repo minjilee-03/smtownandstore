@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Banner from '../main-banner.js';
+import Banner from '../component/main-banner.js';
 
 class Date extends Component {
     render() {
