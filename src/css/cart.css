@@ -1,0 +1,115 @@
+.overlayStyles{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+}
+.skylight-wrapper
+.skylight-dialog{
+    width: 829px!important;
+    left: 58% !important;
+    transition-property: none !important;
+    transition-timing-function: unset!important;
+    transition-duration: unset!important;
+    box-shadow:  rgb(0 0 0 / 0%) 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px !important;
+    padding: 0 !important;
+}
+.skylight-overlay{
+    background-color: rgba(0, 0, 0, 0.0) !important;
+}
+.dialogStyles {
+    width: 50%;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -25%;
+    background-color: #fff;
+    border-radius: 2px;
+    z-index: 10;
+    padding: 15px;
+}
+.title{
+    margin-top: 0;
+}
+.closeButtonStyle{
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.8em;
+    right: 10px;
+    top: 0;
+}
+.header{
+    color: #fff;
+    background: #3d435f;
+    padding: 20px 0 20px 40px;
+}
+.footer{
+    width: 332px;
+    margin: 40px auto;
+    padding-bottom: 40px;
+}
+.buy-wrap{
+    width: 160px;
+    height: 50px;
+    background-color: #fff;
+    color: #2d2f43;
+    font-size: 16px;
+    font-weight: 400;
+    float: left;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+    border: 1px solid #b4b5c1;
+}
+.gotocart-wrap{
+    width: 160px;
+    height: 50px;
+    background-color: #3d435f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    float: right;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+    border: 1px solid #3d435f;
+}
+.totalPrice{
+    position: relative;
+    text-align: right;
+    top: -1px;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2d2f43;
+    border: 1px solid #d8d9df;
+    border-left: 0;
+    border-right: 0;
+    background: #fff;
+}
+.total{
+    color: #2d2f43;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.totalPrice .total em {
+    font-style: normal;
+    font-size: 21px;
+    font-weight: 700;
+}
+.content{
+    padding: 15px;
+}
+.content-container{
+    overflow-y: scroll;
+}

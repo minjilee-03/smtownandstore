@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import HeaderLogo from "../assets/header-logo.svg";
 import mypage from "../assets/mypage.svg";

@@ -1,0 +1,24 @@
+.modal-container{
+    width: 829px!important;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    min-height: 434px;
+}
+.closebtn{
+    background-color: #61dafb;
+    color: black;
+    font-size: 10px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.skylight-close-button{
+    position: absolute !important;
+    right: 0!important;
+    top: 0!important;
+    padding: 25px 39px!important;
+    cursor: pointer!important;
+    color: #fff!important;
+    font-size: 45px !important;
+}
