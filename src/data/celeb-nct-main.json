@@ -1,0 +1,48 @@
+{
+  "celeb_nct_main": [
+    {
+      "id": 0,
+      "imagePath": "/web/celeb/09_NCT/Favorite/Favorite_celeb_PC.jpg"
+    },
+    {
+      "id": 1,
+      "imagePath": "/web/celeb/09_NCT/NCT127/sticker_celeb_pc.jpg"
+    },
+    {
+      "id": 2,
+      "imagePath": "/web/celeb/09_NCT/nct_dream_repackage/nctdream_celeb_pc.jpg"
+    },
+    {
+      "id": 3,
+      "imagePath": "/web/celeb/09_NCT/DREAM_Hot_Sauce/HOTSAUSE_celeb_pc.jpg"
+    },
+    {
+      "id": 4,
+      "imagePath": "/web/celeb/09_NCT/NCT_pt2/NCTpt2_CELEB_PC.jpg"
+    },
+    {
+      "id": 5,
+      "imagePath": "/web/celeb/09_NCT/NCT2020_celeb_PC.jpg"
+    },
+    {
+      "id": 6,
+      "imagePath": "/web/celeb/09_NCT/neo%20zone/repackage/nct127_celeb.jpg"
+    },
+    {
+      "id": 7,
+      "imagePath": "/web/celeb/09_NCT/RELOAD/CELEB_banner_pc.jpg"
+    },
+    {
+      "id": 8,
+      "imagePath": "/web/celeb/09_NCT/NCT_WEBOOM_celeb_pc.jpg"
+    },
+    {
+      "id": 9,
+      "imagePath": "/web/celeb/09_NCT/nct127_celeb.jpg"
+    },
+    {
+      "id": 10,
+      "imagePath": "/web/banner/MAIN/celeb/09_NCT_03.jpg"
+    }
+  ]
+}

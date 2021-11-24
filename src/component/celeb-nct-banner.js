@@ -6,15 +6,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import "swiper/swiper.scss";
-import "../css/main-banner.css";
 import '../css/swiper.css';
+import '../css/celeb/nct.css';
+
+import arrow from '../assets/swiper-arrow.svg';
 
 
+import celeb_nct_main from "../data/celeb-nct-main.json";
 
-import showcase_image from "../data/showcase_image.json";
-import arrow from "../assets/swiper-arrow.svg";
-
-function MainSlideFun() {
+function CelebNctBanner() {
     SwiperCore.use([Navigation,Pagination,Autoplay]);
 
     const swiperRef = React.useRef(null);
@@ -32,23 +32,16 @@ function MainSlideFun() {
             initialSlide={1}
             ref={swiperRef}
         >
-            {showcase_image.showcase_image.map(showcase =>{
+            {celeb_nct_main.celeb_nct_main.map(showcase =>{
                 return (
-                    <SwiperSlide key={showcase.id} className="main-swiper">
+                    <SwiperSlide key={showcase.id}
+                                 style={{ backgroundImage: `url(${'https://www.smtownandstore.com'+showcase.imagePath})` }}>
                         <div className="perv" onClick={() => swiperRef.current.swiper.slidePrev()}
                              style={{ backgroundImage: `url(${arrow}`}}/>
                         <div className="next" onClick={() => swiperRef.current.swiper.slideNext()}
                              style={{ backgroundImage: `url(${arrow}`}}/>
                         <div className="swiper-pagination"></div>
-                        <div className="main-img-more">자세히 보기</div>
-                        <div className="background-color-container" style={{backgroundColor: "#"+ showcase.BackgroundColor}}></div>
                         <div className="main-banner-wrap">
-                            <div className="main-banner-ment">
-                                {showcase.ment}
-                                <span className="main-banner-ment-line"></span>
-                            </div>
-                            <img className="main-slide-image" src={"https://www.smtownandstore.com"
-                            +showcase.imagePath} alt="메인 배너 이미지입니다."/>
                         </div>
 
                     </SwiperSlide>
@@ -59,4 +52,4 @@ function MainSlideFun() {
 }
 
 
-export default MainSlideFun;
+export default CelebNctBanner;

@@ -1,0 +1,67 @@
+{
+  "celeb_nct_weekly": [
+    {
+      "id": 0,
+      "imagePath": "/web/product/medium/202108/82bc771a53e20967f5901889bb14cf3f.jpg",
+      "artist" : "NCT DREAM",
+      "name": "3ure",
+      "price": "₩ 7000"
+    },
+    {
+      "id": 1,
+      "imagePath": "/web/product/medium/202108/173d9740edae7ae2629a660ad04ab9a2.jpg",
+      "artist" : "NCT DREAM",
+      "name": "POSTCARD + HOLOGR",
+      "price": "₩ 8000"
+    },
+    {
+      "id": 2,
+      "imagePath": "/web/product/medium/202110/6853ac5d6912a040414596edff91f1a1.jpg",
+      "artist" : "NCT ",
+      "name": "ELEVATANCE Pt.1",
+      "price": "₩ 13000"
+    },
+    {
+      "id": 3,
+      "imagePath": "/web/product/medium/201906/9a7dc355a07fe71411627f8145ac076c.jpg",
+      "artist" : "NCT 127",
+      "name": "3D LENTICULAR CARD SET",
+      "price": "₩ 8000"
+    },
+    {
+      "id": 4,
+      "imagePath": "/web/product/medium/202110/9ffd68ed63ea23ce63ff7b7c45e11df0.jpg",
+      "artist" : "NCT DREAM",
+      "name": "3D LENTSET - Hello",
+      "price": "₩ 38000"
+    },
+    {
+      "id": 5,
+      "imagePath": "/web/product/medium/202111/03e51a678056c0cd8b2dae4acaaf9c09.jpg",
+      "artist" : "NCT DREAM",
+      "name": "3D L Hello Future",
+      "price": "₩ 35000"
+    },
+    {
+      "id": 6,
+      "imagePath": "/web/product/medium/201904/36d30dd97486e2c5f0fa3f2fdf420343.jpg",
+      "artist" : "NCT 127",
+      "name": " CARD SET - Hello Future",
+      "price": "₩ 6500"
+    },
+    {
+      "id": 7,
+      "imagePath": "/web/product/medium/202111/e802a22a6852b1cc0e8c38ebea2e975a.jpg",
+      "artist" : "NCT DREAM",
+      "name": "3D LENTllo Future",
+      "price": "₩ 26000"
+    },
+    {
+      "id": 8,
+      "imagePath": "/web/product/medium/202110/12d419570c05921fb7e04918f2ba82a2.jpg",
+      "artist" : "NCT",
+      "name": "3D LENTICULAre",
+      "price": "₩ 35000"
+    }
+  ]
+}
