@@ -15,6 +15,7 @@ import '../css/modal.css';
 
 import right_arrow from '../assets/weekly_arrow_right.png';
 import left_arrow from '../assets/weekly_arrow_left.png';
+import down_arrow from '../assets/down_arow.png';
 import CartIcon from '../assets/cart.png';
 
 import celeb_nct_weekly from "../data/celeb-nct-weeklybest.json";
@@ -89,16 +90,18 @@ const CelebNctWeeklyBanner = () => {
                                     className="exam-iamge"/>
                             </div>
                             <div className="content-info">
-                                <div className="content-artist">
-                                    NCT 127
-                                </div>
-                                <div className="content-title">
-                                    XR LIVE NCT 127 SPECIAL EVENT : THE CASTLE No. 127
+                                <div className="content-text">
+                                    <div className="content-artist">
+                                        NCT 127
+                                    </div>
+                                    <div className="content-title">
+                                        XR LIVE NCT 127 SPECIAL EVENT : THE CASTLE No. 127
+                                    </div>
                                 </div>
                                 <div className="select-detail">
                                     <p>
-                                        <select>
-                                            <option>- [필수] CELEB 선택 -</option>
+                                        <select className="select" style={{ backgroundImage: `url(${down_arrow}`}}>
+                                            <option>[필수] CELEB 선택</option>
                                             <option>My cool custon title</option>
                                         </select>
                                     </p>

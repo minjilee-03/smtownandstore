@@ -19,7 +19,9 @@ function header (){
                         <div className="top-header">
                             <ul className="login-list">
                                 <li className="login-item">
-                                    <a className="login-link" href="#">LOGIN</a>
+                                    <Link to="/login" className="login-link">
+                                        LOGIN
+                                    </Link>
                                 </li>
                                 <li className="login-item">
                                     <a className="login-link" href="#">JOIN</a>
