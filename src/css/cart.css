@@ -7,7 +7,11 @@
     z-index: 10;
     background-color: rgba(0,0,0,0.3);
 }
-.skylight-wrapper
+.skylight-wrapper{
+    position: absolute;
+    top: 70%;
+    height: 700px;
+}
 .skylight-dialog{
     width: 50vw!important;
     left: 25% !important;
@@ -19,7 +23,7 @@
     position: sticky !important;
     margin-top: -776px!important;
     margin-left: -31%!important;
-    height: 774px !important;
+    height: 750px !important;
 }
 .skylight-overlay{
     background-color: rgba(0, 0, 0, 0.0) !important;
