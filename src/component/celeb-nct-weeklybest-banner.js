@@ -2,6 +2,7 @@
 import React, {Component, useEffect, useMemo, useState} from "react";
 import SwiperCore, {Autoplay, Navigation, Pagination} from 'swiper';
 import SkyLight from 'react-skylight';
+import $ from "jquery";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -24,11 +25,23 @@ import {Link} from "react-router-dom";
 
 const CelebNctWeeklyBanner = () => {
 
+
+
     SwiperCore.use([Navigation,Pagination,Autoplay]);
 
     const swiperRef = React.useRef(null);
 
     const modalRef = useState(0);
+
+    //토글
+    useEffect(()=>{
+        $(document).ready(function () {
+            $('.celeb_side_sub_list').hide();
+            $('.celeb_side_item').click(function () {
+                $(this).children('.celeb_side_sub_list').slideToggle(1500);
+            });
+        });
+    }, []);
 
 
     return(

@@ -28,13 +28,33 @@ function Celeb_nct() {
                         <div className="celeb_side_menu">
                             <ul className="celeb_side_list">
                                 <li className="celeb_side_item"onClick={()=>toggleMenu()}>
-                                    MUSI
+                                    MUSIC
                                     <span className="sub_arrow"></span>
                                     <ul
                                         className={isOpen ? "active" : "celeb_side_sub_list"}>
                                         <li className="celeb_side_sub_item">CD<span className="move"></span></li>
                                         <li className="celeb_side_sub_item">DVD<span className="move"></span></li>
                                         <li className="celeb_side_sub_item">etc.<span className="move"></span></li>
+                                    </ul>
+                                </li>
+                                <li className="celeb_side_item"onClick={()=>toggleMenu()}>
+                                    DANCE
+                                    <span className="sub_arrow"></span>
+                                    <ul
+                                        className={isOpen ? "active" : "celeb_side_sub_list"}>
+                                        <li className="celeb_side_sub_item">SS<span className="move"></span></li>
+                                        <li className="celeb_side_sub_item">FF<span className="move"></span></li>
+                                        <li className="celeb_side_sub_item">HHH.<span className="move"></span></li>
+                                    </ul>
+                                </li>
+                                <li className="celeb_side_item"onClick={()=>toggleMenu()}>
+                                    TEST
+                                    <span className="sub_arrow"></span>
+                                    <ul
+                                        className={isOpen ? "active" : "celeb_side_sub_list"}>
+                                        <li className="celeb_side_sub_item">GSDFGSD<span className="move"></span></li>
+                                        <li className="celeb_side_sub_item">FSDFDS<span className="move"></span></li>
+                                        <li className="celeb_side_sub_item">ETWE.<span className="move"></span></li>
                                     </ul>
                                 </li>
                             </ul>

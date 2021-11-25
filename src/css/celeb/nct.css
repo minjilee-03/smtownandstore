@@ -220,7 +220,7 @@ z-index: 1;
 .content-slider-wrap
 .content-slider-banner-wrap
 .swiper-container {
-    overflow: visible;
+    overflow: hidden;
 }
 .content-slider-wrap
 .content-slider-banner-wrap
@@ -272,4 +272,7 @@ z-index: 1;
     bottom: 24px;
     left: 262px;
     cursor: pointer;
+}
+.active{
+    display: block;
 }
