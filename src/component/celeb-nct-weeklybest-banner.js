@@ -16,14 +16,13 @@ import '../css/modal.css';
 
 import right_arrow from '../assets/weekly_arrow_right.png';
 import left_arrow from '../assets/weekly_arrow_left.png';
-import down_arrow from '../assets/down_arow.png';
+
 import CartIcon from '../assets/cart.png';
 
 import celeb_nct_weekly from "../data/celeb-nct-weeklybest.json";
-import {Link} from "react-router-dom";
-import Modal from "./modal/modal";
 
-export const AppContext = createContext();
+import Modal from "./modal";
+
 
 const CelebNctWeeklyBanner = () => {
 
@@ -51,7 +50,6 @@ const CelebNctWeeklyBanner = () => {
 
 
     return(
-        <AppContext.Provider value={popUpShow}>
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -105,7 +103,6 @@ const CelebNctWeeklyBanner = () => {
                 <Modal/>
             </SkyLight>
         </Swiper>
-        </AppContext.Provider>
     )
 }
 

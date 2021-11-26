@@ -1,33 +1,15 @@
 import React, { useState } from 'react';
 import SkyLight from "react-skylight";
-import down_arrow from "../../assets/down_arow.png";
+import down_arrow from "../assets/down_arow.png";
 import {Link} from "react-router-dom";
-import { AppContext } from "../celeb-nct-weeklybest-banner";
 
-
-// const Children = () => {
-//     return (
-//         <AppContext.Consumer>
-//             {(content) => (
-//                 <>
-//                     <h3>돈 {content.price}입니다.</h3>
-//                     <h3>제품명 {content.name}입니다.</h3>
-//                 </>
-//             )}
-//         </AppContext.Consumer>
-//     );
-// };
-//
-// export default Children;
 
 const Modal = () => {
     const modalRef = useState(0);
     return (
-        <AppContext.Consumer>
-            {(popUpShow) => (
                 <div>
                     <div className="header">
-                        <h1>옵션 선택  {popUpShow.popId}</h1>
+                        <h1>옵션 선택</h1>
                     </div>
                     <div className="content">
                         <div className="content-wrap">
@@ -69,8 +51,6 @@ const Modal = () => {
                         <Link to="/celeb_exo" className="gotocart-wrap"><span className="gotocart">장바구니 담기</span></Link>
                     </div>
                 </div>
-             )}
-        </AppContext.Consumer>
     );
 }
 
