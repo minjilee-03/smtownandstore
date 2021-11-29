@@ -97,6 +97,13 @@ const LoginForm = () => {
             ...account,
             [e.target.name]: e.target.value,
         });
+
+        // setAccount((account) => (
+        //     {
+        //         ...account,
+        //         [e.target.name]: e.target.value,
+        //     }
+        // ));
     };
 
 
@@ -132,5 +139,6 @@ const LoginForm = () => {
 
     );
 }
+
 
 export default LoginForm;

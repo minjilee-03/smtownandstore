@@ -9,11 +9,15 @@
 }
 .skylight-wrapper{
     position: absolute;
-    top: 70%;
+    top: 35%;
+    left: 45%;
     height: 700px;
 }
+.exam-image-wrap{
+    margin-bottom: 15px;
+}
 .skylight-dialog{
-    width: 50vw!important;
+    width: 872px!important;
     left: 25% !important;
     transition-property: none !important;
     transition-timing-function: unset!important;
