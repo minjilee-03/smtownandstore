@@ -1,0 +1,67 @@
+{
+  "celeb_boa_weekly": [
+    {
+      "id": 0,
+      "imagePath": "/web/product/medium/202101/2b77d75bbd97ee843786f93e4f76b197.jpg",
+      "artist" : "BoA",
+      "name": "3ure",
+      "price": 7000
+    },
+    {
+      "id": 1,
+      "imagePath": "/web/product/medium/202103/84bd08a3885af94c23e48290730ec668.jpg",
+      "artist" : "BoA",
+      "name": "POSTCARD + HOLOGR",
+      "price": 8000
+    },
+    {
+      "id": 2,
+      "imagePath": "/web/product/medium/201907/83ceee19b19aa464c292ef92113b880d.jpg",
+      "artist" : "BoA",
+      "name": "ELEVATANCE Pt.1",
+      "price": 13000
+    },
+    {
+      "id": 3,
+      "imagePath": "/web/product/medium/201904/bbc65c645915ccb303f3de5e62366696.jpg",
+      "artist" : "BoA",
+      "name": "3D LENTICULAR CARD SET",
+      "price": 8000
+    },
+    {
+      "id": 4,
+      "imagePath": "/web/product/medium/202110/9ffd68ed63ea23ce63ff7b7c45e11df0.jpg",
+      "artist" : "BoA",
+      "name": "3D LENTSET - Hello",
+      "price": 38000
+    },
+    {
+      "id": 5,
+      "imagePath": "/web/product/medium/202111/03e51a678056c0cd8b2dae4acaaf9c09.jpg",
+      "artist" : "BoA",
+      "name": "3D L Hello Future",
+      "price": 35000
+    },
+    {
+      "id": 6,
+      "imagePath": "/web/product/medium/201904/36d30dd97486e2c5f0fa3f2fdf420343.jpg",
+      "artist" : "BoA",
+      "name": " CARD SET - Hello Future",
+      "price": 6500
+    },
+    {
+      "id": 7,
+      "imagePath": "/web/product/medium/202111/e802a22a6852b1cc0e8c38ebea2e975a.jpg",
+      "artist" : "BoA",
+      "name": "3D LENTllo Future",
+      "price": 26000
+    },
+    {
+      "id": 8,
+      "imagePath": "/web/product/medium/202110/12d419570c05921fb7e04918f2ba82a2.jpg",
+      "artist" : "BoA",
+      "name": "3D LENTICULAre",
+      "price": 35000
+    }
+  ]
+}

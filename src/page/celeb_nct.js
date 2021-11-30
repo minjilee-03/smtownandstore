@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Banner from '../component/celeb-nct-banner';
 import Header from '../component/header';
 import Weekly from '../component/celeb-nct-weeklybest-banner';
+import AllProduct from '../component/allProductNct';
 import '../css/header.css';
 import '../css/celeb/nct.css'
 
@@ -70,6 +71,7 @@ function Celeb_nct() {
                             </div>
                         </div>
                         <div className="content_all_product">
+                            <AllProduct/>
                         </div>
                     </div>
                 </div>

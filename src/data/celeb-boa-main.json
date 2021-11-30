@@ -1,0 +1,24 @@
+{
+  "celeb_boa_main": [
+    {
+      "id": 0,
+      "imagePath": "/web/celeb/01_BoA/Boa10th/BoA10th_CELEB_PC.jpg"
+    },
+    {
+      "id": 1,
+      "imagePath": "/web/celeb/01_BoA/CELEB_banner_BOA2_pc.jpg"
+    },
+    {
+      "id": 2,
+      "imagePath": "/web/celeb/01_BoA/BoA_01.jpg"
+    },
+    {
+      "id": 3,
+      "imagePath": "/web/main/01_MAIN_BANNER/01_BoA_02.jpg"
+    },
+    {
+      "id": 4,
+      "imagePath": "/web/banner/MAIN/celeb/01_BoA_03.jpg"
+    }
+  ]
+}
