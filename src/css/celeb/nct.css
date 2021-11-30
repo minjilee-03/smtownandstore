@@ -1,3 +1,6 @@
+.celeb-nct-section{
+    overflow-x: hidden;
+}
 .celeb-nct-section
 .celeb-nct-banner{
     margin-bottom: 60px;
@@ -220,7 +223,8 @@ z-index: 1;
 .content-slider-wrap
 .content-slider-banner-wrap
 .swiper-container {
-    overflow: hidden;
+    overflow-x: hidden;
+    width: 958px;
 }
 .content-slider-wrap
 .content-slider-banner-wrap

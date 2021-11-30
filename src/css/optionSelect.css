@@ -1,0 +1,52 @@
+.OptionDetail{
+    padding: 20px 0 20px 4px;
+    color: #353535;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+    border-top: 1px solid #f0f0f2;
+}
+.OptionDetailWrap{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+}
+.groupName, .artistName{
+    display: block;
+    color: #999;
+    font-style: normal;
+    font-size: 12px;
+}
+.closeBtn{
+    position: absolute;
+    right: 0;
+    top: -8px;
+    cursor: pointer;
+}
+.productCount{
+    margin: auto 0;
+}
+.productCountInput{
+    border: 0;
+    padding: 0 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    width: 30px;
+}
+.CountBtn{
+    border-radius: 50%;
+    border: 1px solid #d8d9df;
+}
+.priceWrap{
+    display: flex;
+    align-items: center;
+}

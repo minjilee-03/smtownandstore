@@ -4,8 +4,6 @@ import SwiperCore, {Autoplay, Navigation, Pagination} from 'swiper';
 import SkyLight from 'react-skylight';
 import $ from "jquery";
 
-import { PopContext } from "../context/context";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -34,6 +32,7 @@ const CelebNctWeeklyBanner = () => {
 
     //토글
     useEffect(()=>{
+        $("select option[value*='Sold Out']").prop('disabled',true);
         $(document).ready(function () {
             $('.celeb_side_sub_list').hide();
             $('.celeb_side_item').click(function () {

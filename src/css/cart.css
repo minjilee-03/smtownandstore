@@ -27,7 +27,7 @@
     position: sticky !important;
     margin-top: -776px!important;
     margin-left: -31%!important;
-    height: 750px !important;
+    height: auto !important;
 }
 .skylight-overlay{
     background-color: rgba(0, 0, 0, 0.0) !important;
@@ -65,8 +65,8 @@
 }
 .footer{
     width: 332px;
-    margin: 40px auto;
-    padding-bottom: 40px;
+    margin: 20px auto;
+    padding-bottom: 77px;
 }
 .buy-wrap{
     width: 160px;

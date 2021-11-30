@@ -1,33 +1,87 @@
 import React, {useState, useRef, useEffect} from 'react';
-import SkyLight from "react-skylight";
 import down_arrow from "../assets/down_arow.png";
+import closeBtn from '../assets/closeBtn.gif';
+
 import {Link} from "react-router-dom";
 
 import '../css/cart.css';
 import '../css/modal.css';
 import celeb_nct_weekly from "../data/celeb-nct-weeklybest.json";
 
+import '../css/optionSelect.css'
+
 
 const Modal = (props) => {
-
 
     const {showcaseId} = props || {}
 
     const [Selected, setSelected] = useState("");
 
-    const handleSelect = (e) => {
-        setSelected(e.target.value);
-        alert("선택된 ===>", e.target.value)
+    const [todos, setTodos] = useState([]);
+
+    const nextId = useRef(0);
+
+    const [count, setCount] = useState(1);
+
+    const increase = () => {
+        setCount(count  + 1);
+    }
+
+    const decrease = () => {
+        setCount(count  - 1);
+    }
+
+    const countHandle = (e) => {
+        const countValue = e.target.value;
+        setCount(countValue)
+    }
+
+
+    useEffect(()=>{
+        if (count <1){
+            return alert("최소 주문수량은 1개 입니다."), setCount(1)
+        }
+        else if(count >20){
+            return alert("최소 주문수량은 20개 입니다."), setCount(20)
+        }
+        else{
+        }
+    }, [count]);
+
+
+    const onCreate = () => {
+        if (Selected.length < 1) {
+            return;
+        } else {
+            const newTodo = {
+                id: nextId.current,
+                selectName :celeb_nct_weekly.celeb_nct_weekly[showcaseId].artist ,
+                productName : celeb_nct_weekly.celeb_nct_weekly[showcaseId].name,
+                member : Selected,
+            };
+            setTodos([...todos, newTodo]);
+            nextId.current += 1;
+            setSelected("")
+            //내가 선택한 select값들이 들어간 배열  ==> console.log(newTodo)
+            //모달이 닫혔을 때 초기화 되야 함.
+        }
+    };
+
+    const onRemove = (id) => {
+        setTodos(todos.filter((todo) => todo.id !== id));
     };
 
 
-    const [period, setPeriod] = useState(null)
-
-    const onPeriodChange = (e) => {
+    const handleSelect = (e) => {
         const {value} = e.target
-        setPeriod(value)
+        setSelected(value)
+        console.log("선택된 ===>", e.target.value)
+    };
 
+    const price = () => {
+        return "₩"+celeb_nct_weekly.celeb_nct_weekly[showcaseId].price*count
     }
+
 
     const nctDream = [
         {id: 0, value: "MARK"},
@@ -86,7 +140,6 @@ const Modal = (props) => {
         return "0"
     }
 
-
     return (
 
         <div>
@@ -113,11 +166,9 @@ const Modal = (props) => {
                             <div className="select-detail">
                                 <p>
                                     <select className="select" style={{ backgroundImage: `url(${down_arrow}`}}
-                                            value={period || ''}
-                                            onChange={onPeriodChange}
-                                        >
+                                            value={Selected} onChange={handleSelect}  onClick={onCreate}>
 
-
+                                        <option disabled>[필수] CELEB 선택</option>
                                         {
                                             (function() {//시간 남으면 수정하기
 
@@ -126,7 +177,7 @@ const Modal = (props) => {
                                                 if ("NCT DREAM" === nowArtist)
                                                     return (
                                                         nctDream.map(period => {
-                                                            return <option key={period.id  || ''} onChange={handleSelect}>
+                                                            return <option key={period.id  || ''} >
                                                                 {period.value}
                                                             </option>
                                                         })
@@ -134,7 +185,7 @@ const Modal = (props) => {
 
                                                 if ("NCT 127" === nowArtist) return (
                                                     nct127.map(period => {
-                                                        return <option key={period.id  || ''}  onChange={handleSelect} value={period.value}>
+                                                        return <option key={period.id  || ''}>
                                                             {period.value}
                                                         </option>
                                                     })
@@ -142,14 +193,13 @@ const Modal = (props) => {
 
                                                 if ("NCT" === nowArtist) return (
                                                     nctAll.map(period => {
-                                                        return <option key={period.id  || ''} onChange={handleSelect}>
+                                                        return <option key={period.id  || ''}>
                                                             {period.value}
                                                         </option>
                                                     })
                                                 );
                                             })()
                                         }
-
                                     </select>
                                 </p>
                             </div>
@@ -158,8 +208,30 @@ const Modal = (props) => {
                             </div>
                         </div>
                     </div>
+                    <div className="OptionDetail">
+                        {todos.map((todo) => (
+                            <div className="OptionDetailWrap" key={todo.id}>
+                                <div>
+                                    <p className="product">
+                                        <span className="groupName">{todo.selectName}</span>
+                                        <span className="productName">{todo.productName}</span>
+                                        <span className="artistName">{todo.member}</span>
+                                    </p>
+                                </div>
+                                <div className="productCount">
+                                    <button className="CountBtn" onClick={decrease}>-</button>
+                                    <input  className="productCountInput" type="number" value={count} onChange={countHandle}></input>
+                                    <button className="CountBtn" onClick={increase}>+</button>
+                                </div>
+                                <div className="priceWrap">
+                                    <img src={closeBtn} alt="삭제" onClick={() => onRemove(todo.id)} className="closeBtn"/>
+                                    <span>{price()}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                     <div className="totalPrice">
-                        총 상품금액(수량) <span className="total"><em>{celeb_nct_weekly.celeb_nct_weekly[showcaseId].price}</em>(0개)</span>
+                        총 상품금액(수량) <span className="total"><em> </em>(0개)</span>
                     </div>
                 </div>
             </div>
