@@ -29,7 +29,6 @@ const CelebNctWeeklyBanner = () => {
     const modalRef = useState(0);
     const [showcaseId, setShowcaseId] = useState(null)
 
-
     //토글
     useEffect(()=>{
         $("select option[value*='Sold Out']").prop('disabled',true);
@@ -42,7 +41,6 @@ const CelebNctWeeklyBanner = () => {
 
 
     }, []);
-
 
     useEffect(() => {
         if(showcaseId) {
