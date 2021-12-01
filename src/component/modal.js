@@ -168,7 +168,7 @@ const Modal = (props) => {
                                     <select className="select" style={{ backgroundImage: `url(${down_arrow}`}}
                                             value={Selected} onChange={handleSelect}  onClick={onCreate}>
 
-                                        <option disabled>[필수] CELEB 선택</option>
+                                        <option>[필수] CELEB 선택</option>
                                         {
                                             (function() {//시간 남으면 수정하기
 
