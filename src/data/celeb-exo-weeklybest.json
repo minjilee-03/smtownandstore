@@ -1,0 +1,67 @@
+{
+  "celeb_exo_weekly": [
+    {
+      "id": 0,
+      "imagePath": "/web/product/medium/201909/c9724c2778615ffdd85c473f04075ba7.jpg",
+      "artist" : "Exo",
+      "name": "3ure",
+      "price": 7000
+    },
+    {
+      "id": 1,
+      "imagePath": "/web/product/medium/202105/eac86321223957b1f5f889df7bd69b2d.jpg",
+      "artist" : "Exo",
+      "name": "POSTCARD + HOLOGR",
+      "price": 8000
+    },
+    {
+      "id": 2,
+      "imagePath": "/web/product/medium/201907/b375b4caea32a7db46f1695cc6cd3c56.jpg",
+      "artist" : "Exo",
+      "name": "ELEVATANCE Pt.1",
+      "price": 13000
+    },
+    {
+      "id": 3,
+      "imagePath": "/web/product/medium/20191230/bb9e67bb331c0da5f2326bd3e370b977.jpg",
+      "artist" : "Exo",
+      "name": "3D LENTICULAR CARD SET",
+      "price": 8000
+    },
+    {
+      "id": 4,
+      "imagePath": "/web/product/medium/202106/0faccfe792d286741ca68e4649458144.jpg",
+      "artist" : "Exo",
+      "name": "3D LENTSET - Hello",
+      "price": 38000
+    },
+    {
+      "id": 5,
+      "imagePath": "/web/product/medium/20191223/9911ed629975490ec06ca82fafa5ebd6.jpg",
+      "artist" : "Exo",
+      "name": "3D L Hello Future",
+      "price": 35000
+    },
+    {
+      "id": 6,
+      "imagePath": "/web/product/medium/20200123/8c98faddb47a51801e4015b8e13abf77.jpg",
+      "artist" : "Exo",
+      "name": " CARD SET - Hello Future",
+      "price": 6500
+    },
+    {
+      "id": 7,
+      "imagePath": "/web/product/medium/202109/46e447f2e9eefe144222e17b9c595441.jpg",
+      "artist" : "Exo",
+      "name": "3D LENTllo Future",
+      "price": 26000
+    },
+    {
+      "id": 8,
+      "imagePath": "/web/product/medium/201904/b1321d7a2d59ad033f556ce67d097ced.jpg",
+      "artist" : "Exo",
+      "name": "3D LENTICULAre",
+      "price": 35000
+    }
+  ]
+}

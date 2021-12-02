@@ -65,7 +65,7 @@ function header (){
                                                 </ul>
                                             </li>
                                             <li className="top-menu-item">PRODUCT</li>
-                                            <li className="top-menu-item">&PICK</li>
+                                            <li className="top-menu-item"><Link to="/pick" className="sub-menu-link">&PICK</Link></li>
                                             <li className="top-menu-item">EVENT</li>
                                             <li className="top-menu-item">BRAND</li>
                                         </ul>

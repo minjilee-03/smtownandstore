@@ -1,0 +1,24 @@
+{
+  "celeb_exo_main": [
+    {
+      "id": 0,
+      "imagePath": "/web/celeb/07_EXO/kai_peaches/celeb_pc.jpg"
+    },
+    {
+      "id": 1,
+      "imagePath": "/web/celeb/07_EXO/DO_ALBUM/Sympathy_celeb_pc.jpg"
+    },
+    {
+      "id": 2,
+      "imagePath": "/web/celeb/07_EXO/bambi/BH_CELEB_PC.jpg"
+    },
+    {
+      "id": 3,
+      "imagePath": "/web/celeb/07_EXO/1billion_view/CELEB_banner_pc.jpg"
+    },
+    {
+      "id": 4,
+      "imagePath": "/web/celeb/07_EXO/delight/CELEB_banner_pc.jpg"
+    }
+  ]
+}

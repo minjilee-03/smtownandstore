@@ -9,7 +9,6 @@ import "../css/modal.css";
 import celeb_nct_weekly from "../data/celeb-nct-weeklybest.json";
 
 import "../css/optionSelect.css";
-import $ from "jquery";
 
 const Modal = (props) => {
 
@@ -18,10 +17,12 @@ const Modal = (props) => {
   const [Selected, setSelected] = useState("");
 
   const nextId = useRef(0);
+
+  const countId = useRef(0);
+
   const [todos, setTodos] = useState([]);
 
-
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState([]);
 
   const increase = () => {
     setCount(count + 1);
@@ -31,23 +32,37 @@ const Modal = (props) => {
     setCount(count - 1);
   };
 
-  const countHandle = (e) => {
-    const countValue = e.target.value;
-    setCount(countValue);
-  };
+  // const countHandle = (e) => {
+  //   const countValue = e.target.value;
+  //   setCount(countValue);
+  // };
 
   useEffect(() => {
+
     if (count < 1) {
       return alert("최소 주문수량은 1개 입니다."), setCount(1);
     } else if (count > 20) {
       return alert("최소 주문수량은 20개 입니다."), setCount(20);
     } else {
+
     }
   }, [count]);
 
-  useEffect(()=>{
-
-  })
+  const countChange = (e) => {
+    console.log("시작전 count ==> ", count)
+    console.log("시작전 e ==> ", e)
+    if (count === 0) {
+      return;
+    } else {
+      // setCount(e.target.value);
+      const newCount = {
+        id: nextId.current,
+        count: count
+      };
+      setCount([...count, newCount]);
+      console.log("카운트채인지 ===> ", newCount);
+    }
+  }
 
   const onCreate = () => {
     if (Selected.length < 1) {
@@ -57,16 +72,17 @@ const Modal = (props) => {
         id: nextId.current,
         selectName: celeb_nct_weekly.celeb_nct_weekly[showcaseId].artist,
         productName: celeb_nct_weekly.celeb_nct_weekly[showcaseId].name,
-        member: Selected,
-        count: count
+        member: Selected
       };
       setTodos([...todos, newTodo]);
       nextId.current += 1;
       setSelected("");
+      console.log("onCreate count입니다===> ",count)
       //내가 선택한 select값들이 들어간 배열  ==> console.log(newTodo)
       //모달이 닫혔을 때 초기화 되야 함.
     }
   }
+
 
   //onClick={() => findMultiple(todo.member)}
 
@@ -234,6 +250,7 @@ const Modal = (props) => {
           {/*여기서부터 select 선택시 추가 되는 덩어리들 */}
           <div className="OptionDetail" >
             {todos.map((todo) => (
+                // onClick={()=>{console.log("키 ==> ", todo.id)}}
               <div className="OptionDetailWrap" key={todo.id}>
                 <div>
                   <p className="product">
@@ -244,16 +261,19 @@ const Modal = (props) => {
                 </div>
 
                 <div className="productCount">
-                  <button className="CountBtn" onClick={decrease}>
+                  <button className="CountBtn" onClick={()=> {onCreate(count-1); setCount(count-1)}}>
                     -
                   </button>
                   <input
                     className="productCountInput"
                     type="number"
                     value={count}
-                    onChange={countHandle}
+                    key={todo.id}
+                    // onClick={countChange}
+                    // onChange={countHandle}
+                    onChange={countChange}
                   ></input>
-                  <button className="CountBtn" onClick={increase}>
+                  <button className="CountBtn" onClick={()=> {onCreate(count+1); setCount(count+1)}}>
                     +
                   </button>
                 </div>
@@ -271,7 +291,7 @@ const Modal = (props) => {
           </div>
           {/*여기까지 select 선택시 추가 되는 덩어리들 */}
           <div className="totalPrice">
-            총 상품금액(수량){" "}
+            총 상품금액(수량){price()}
             <span className="total">
               <em> </em>(0개)
             </span>
@@ -280,7 +300,6 @@ const Modal = (props) => {
       </div>
       <div className="footer">
         <Link to="/celeb_boa" className="buy-wrap">
-          {" "}
           <span className="buy">바로 구매하기</span>
         </Link>
         <Link to="/celeb_exo" className="gotocart-wrap">

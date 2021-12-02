@@ -110,7 +110,7 @@ const LoginForm = () => {
     const Login = () => {
         if ( userEail === account.email && userPassword === account.password) {
             alert('메인으로 이동합니다');
-            navigate('/');
+            navigate('/afterLogin');
         }
         else{
             alert('다시 시도해주세요')

@@ -1,0 +1,35 @@
+.pickKeySection{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+.title{
+    text-align: center;
+}
+.imageSection{
+    width: 1920px;
+}
+.vedioContainer{
+    margin: 0 auto;
+    position: absolute;
+    left: 299px;
+    top: 2278px;
+}
+.keyVedio{
+    width: 1319px !important;
+    height: 741px !important;
+}
+.more-product{
+    width: 464px;
+    height: 79px;
+    position: absolute;
+    right: 476px;
+    bottom: 163px;
+    cursor: pointer;
+}
+.Section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
