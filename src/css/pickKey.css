@@ -33,3 +33,34 @@
     display: flex;
     justify-content: center;
 }
+.keface{
+    position: absolute;
+}
+.keface1{
+    right: 583px;
+    top: 115px;
+    width: 446px;
+}
+.keface2{
+    right: 304px;
+    top: 112px;
+    width: 268px;
+}
+.keface3{
+    right: 304px;
+    top: 507px;
+    width: 268px;
+}
+.keface4{
+    right: 304px;
+    top: 626px;
+    width: 268px;
+}
+.more-product-section2{
+    width: 464px;
+    height: 79px;
+    position: absolute;
+    right: 476px;
+    bottom: 163px;
+    cursor: pointer;
+}

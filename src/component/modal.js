@@ -22,11 +22,19 @@ const Modal = (props) => {
 
   const [todos, setTodos] = useState([]);
 
-  const [count, setCount] = useState([]);
+  const [count, setCount] = useState({});
 
-  const increase = () => {
-    setCount(count + 1);
+  const increase = (id) => {
+    console.log(':id' , id)
+    setCount((count) => ({
+      ...count,
+      [id]: (count[id] || 1) + 1
+    }));
   };
+
+  useEffect(() => {
+    console.log('count: ', count)
+  }, [count])
 
   const decrease = () => {
     setCount(count - 1);
@@ -37,16 +45,16 @@ const Modal = (props) => {
   //   setCount(countValue);
   // };
 
-  useEffect(() => {
-
-    if (count < 1) {
-      return alert("최소 주문수량은 1개 입니다."), setCount(1);
-    } else if (count > 20) {
-      return alert("최소 주문수량은 20개 입니다."), setCount(20);
-    } else {
-
-    }
-  }, [count]);
+  // useEffect(() => {
+  //
+  //   if (count < 1) {
+  //     return alert("최소 주문수량은 1개 입니다."), setCount(1);
+  //   } else if (count > 20) {
+  //     return alert("최소 주문수량은 20개 입니다."), setCount(20);
+  //   } else {
+  //
+  //   }
+  // }, [count]);
 
   const countChange = (e) => {
     console.log("시작전 count ==> ", count)
@@ -261,19 +269,24 @@ const Modal = (props) => {
                 </div>
 
                 <div className="productCount">
-                  <button className="CountBtn" onClick={()=> {onCreate(count-1); setCount(count-1)}}>
+                  <button className="CountBtn" onClick={()=> {countChange(count-1); setCount(count-1)}}>
                     -
                   </button>
                   <input
                     className="productCountInput"
                     type="number"
-                    value={count}
+                    value={count[todo.id] || 1}
                     key={todo.id}
                     // onClick={countChange}
                     // onChange={countHandle}
                     onChange={countChange}
                   ></input>
-                  <button className="CountBtn" onClick={()=> {onCreate(count+1); setCount(count+1)}}>
+
+                  <button className="CountBtn" onClick={()=> {
+                    // countChange(count+1);
+                    // setCount(count+1)}
+                    increase(todo.id)
+                  }}>
                     +
                   </button>
                 </div>
