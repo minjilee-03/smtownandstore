@@ -12,6 +12,7 @@ import '../css/swiper.css';
 
 import '../css/celeb/nct.css';
 
+
 import right_arrow from '../assets/weekly_arrow_right.png';
 import left_arrow from '../assets/weekly_arrow_left.png';
 
@@ -21,7 +22,13 @@ import celeb_nct_weekly from "../data/celeb-nct-weeklybest.json";
 
 import Modal from './modal'
 
+
 const CelebNctWeeklyBanner = () => {
+
+    const executeAfterModalClose = () => {
+        alert("Executed after close");
+    };
+
     SwiperCore.use([Navigation,Pagination,Autoplay]);
 
     const swiperRef = React.useRef(null);
@@ -102,9 +109,12 @@ const CelebNctWeeklyBanner = () => {
             <SkyLight
                 hideOnOverlayClicked
                 ref={ref => modalRef.simpleDialog = ref}
+
+                afterClose={executeAfterModalClose}
             >
                 <Modal  showcaseId={showcaseId}/>
             </SkyLight>
+
         </div>
     )
 }

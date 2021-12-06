@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef} from "react";
 import down_arrow from "../assets/down_arow.png";
 import closeBtn from "../assets/closeBtn.gif";
 
@@ -11,66 +11,56 @@ import celeb_nct_weekly from "../data/celeb-nct-weeklybest.json";
 import "../css/optionSelect.css";
 
 const Modal = (props) => {
-
   const { showcaseId } = props || {};
 
   const [Selected, setSelected] = useState("");
 
   const nextId = useRef(0);
 
-  const countId = useRef(0);
-
   const [todos, setTodos] = useState([]);
 
   const [count, setCount] = useState({});
 
   const increase = (id) => {
-    console.log(':id' , id)
+    const member = (count[id] || 1) + 1;
+    console.log(":id", id);
     setCount((count) => ({
       ...count,
-      [id]: (count[id] || 1) + 1
+      [id]: member,
     }));
+    if (member > 20) {
+      return alert("최소 주문수량은 20개 입니다."), setCount(20);
+    }
+    console.log("increase==>", member);
   };
 
-  useEffect(() => {
-    console.log('count: ', count)
-  }, [count])
-
-  const decrease = () => {
-    setCount(count - 1);
+  const decrease = (id) => {
+    const member = (count[id] || 1) - 1;
+    console.log(":id", id);
+    setCount((count) => ({
+      ...count,
+      [id]: member,
+    }));
+    if (member < 1) {
+      return alert("최소 주문수량은 1개 입니다."), setCount(1);
+    }
   };
-
-  // const countHandle = (e) => {
-  //   const countValue = e.target.value;
-  //   setCount(countValue);
-  // };
-
-  // useEffect(() => {
-  //
-  //   if (count < 1) {
-  //     return alert("최소 주문수량은 1개 입니다."), setCount(1);
-  //   } else if (count > 20) {
-  //     return alert("최소 주문수량은 20개 입니다."), setCount(20);
-  //   } else {
-  //
-  //   }
-  // }, [count]);
 
   const countChange = (e) => {
-    console.log("시작전 count ==> ", count)
-    console.log("시작전 e ==> ", e)
+    console.log("시작전 count ==> ", count);
+    console.log("시작전 e ==> ", e);
     if (count === 0) {
       return;
     } else {
       // setCount(e.target.value);
       const newCount = {
         id: nextId.current,
-        count: count
+        count: count,
       };
       setCount([...count, newCount]);
       console.log("카운트채인지 ===> ", newCount);
     }
-  }
+  };
 
   const onCreate = () => {
     if (Selected.length < 1) {
@@ -80,50 +70,59 @@ const Modal = (props) => {
         id: nextId.current,
         selectName: celeb_nct_weekly.celeb_nct_weekly[showcaseId].artist,
         productName: celeb_nct_weekly.celeb_nct_weekly[showcaseId].name,
-        member: Selected
+        member: Selected,
       };
       setTodos([...todos, newTodo]);
       nextId.current += 1;
       setSelected("");
-      console.log("onCreate count입니다===> ",count)
-      //내가 선택한 select값들이 들어간 배열  ==> console.log(newTodo)
-      //모달이 닫혔을 때 초기화 되야 함.
     }
-  }
-
-
-  //onClick={() => findMultiple(todo.member)}
-
-  // function isApple(element)  {
-  //   if(element.member === 'MARK')  {
-  //     return true;
-  //   }
-  // }
-  //
-  // const apple = todos.find(isApple);
+  };
 
   const onRemove = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  // const findMultiple = (member) => {
-  //   if(apple.member === member){
-  //     console.log("이미 있는 아티스트입니다==>", member)
-  //   }
-  //   else{
-  //     console.log("새아티스트입니다", member)
-  //   }
-  // };
+  const multiple = (e, multipleMemberArray) => {
+    console.log("내가 선택한 거 ==> ", e);
+    console.log("멀티플", multipleMemberArray);
+
+    const multipleFind = multipleMemberArray.find((todo) => todo);
+
+    console.log(
+      "multipleFind==> ",
+      multipleMemberArray.find((todo) => todo)
+    );
+
+    if (multipleFind === e) {
+      console.log("이미 있는 아티스트 입니다 ==>", e);
+      setTodos(todos.filter((todo) => todo !== e));
+    } else {
+      console.log("새 아티스트 입니다 ==>", e);
+    }
+  };
 
   const handleSelect = (e) => {
     const { value } = e.target;
+
+    const multipleMemberArray = todos.map((todo) => todo.member);
+
     setSelected(value);
-    console.log("선택된 ===>", e.target.value);
+    multiple(value, multipleMemberArray);
   };
 
-  const price = () => {
-    return "₩" + celeb_nct_weekly.celeb_nct_weekly[showcaseId].price * count;
+  const price = (id) => {
+      console.log("id입니다 ==> " , count[id])
+      return "₩" + celeb_nct_weekly.celeb_nct_weekly[showcaseId].price * count[id]
   };
+
+  // const price = (id) => {
+  //   return "₩" + celeb_nct_weekly.celeb_nct_weekly[showcaseId].price * count[id];
+  // };
+  //
+  // const totalPrice = (id) => {
+  //   return "₩"
+  // }
+
 
   const nctDream = [
     { id: 0, value: "MARK" },
@@ -177,6 +176,7 @@ const Modal = (props) => {
   } else if (!celeb_nct_weekly.celeb_nct_weekly[showcaseId].price) {
     return "0";
   }
+
 
   return (
     <div>
@@ -256,37 +256,44 @@ const Modal = (props) => {
             </div>
           </div>
           {/*여기서부터 select 선택시 추가 되는 덩어리들 */}
-          <div className="OptionDetail" >
+          <div className="OptionDetail">
             {todos.map((todo) => (
-                // onClick={()=>{console.log("키 ==> ", todo.id)}}
+              // onClick={()=>{console.log("키 ==> ", todo.id)}}
               <div className="OptionDetailWrap" key={todo.id}>
                 <div>
                   <p className="product">
                     <span className="groupName">{todo.selectName}</span>
                     <span className="productName">{todo.productName}</span>
-                    <span className="artistName" >{todo.member}</span>
+                    <span className="artistName">{todo.member}</span>
                   </p>
                 </div>
 
                 <div className="productCount">
-                  <button className="CountBtn" onClick={()=> {countChange(count-1); setCount(count-1)}}>
+                  <button
+                    className="CountBtn"
+                    onClick={() => {
+                      decrease(todo.id);
+                    }}
+                  >
                     -
                   </button>
+
                   <input
                     className="productCountInput"
                     type="number"
                     value={count[todo.id] || 1}
                     key={todo.id}
-                    // onClick={countChange}
-                    // onChange={countHandle}
                     onChange={countChange}
                   ></input>
 
-                  <button className="CountBtn" onClick={()=> {
-                    // countChange(count+1);
-                    // setCount(count+1)}
-                    increase(todo.id)
-                  }}>
+                  <button
+                    className="CountBtn"
+                    onClick={() => {
+                      // countChange(count+1);
+                      // setCount(count+1)}
+                      increase(todo.id);
+                    }}
+                  >
                     +
                   </button>
                 </div>
@@ -297,7 +304,18 @@ const Modal = (props) => {
                     onClick={() => onRemove(todo.id)}
                     className="closeBtn"
                   />
-                  <span onClick={() => {console.log("todo.id",todo.id, "todos",todos)}}>{price()}</span>
+                  <span
+                    onClick={() => {
+                      console.log(
+                        "todos",
+                        todos.map((todo) => todo.member)
+                      );
+                    }}
+                  >
+
+                    { price(todo.id)}
+
+                  </span>
                 </div>
               </div>
             ))}
@@ -324,11 +342,3 @@ const Modal = (props) => {
 };
 
 export default Modal;
-
-
-
-
-
-
-
-
